@@ -1,0 +1,44 @@
+<div class="jumbotron">
+  <h3>{{company}}</h3>
+  <p class="lead">
+    Always a pleasure scaffolding your apps.
+  </p>
+  <div class="form-horizontal">
+    <div class="form-group">
+      <label for="teamDropdown" class="col-sm-3 control-label">Team Name:</label>
+      <div class="col-sm-9" >
+      <select id="teamDropdown" class="form-control" ng-model="team" 
+        ng-options="t as t.name for t in teams"
+        ng-change="loadTeamData()"><option value="">--</option></select>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row alert alert-success" ng-show="message">
+  {{message}}
+</div>
+<div class="row alert alert-warning" ng-show="errMessage">
+  {{errMessage}}
+</div>
+<div class="row" ng-show="isProductionTeam()">
+  <form class="form-inline" ng-submit="addNewJoin()">
+    <div class="form-group">
+      <label for="newjoin">New Join:</label>
+      <input type="text" class="form-control" required id="newjoin" placeholder="Enter name of new join" ng-model="newjoin">
+    </div>
+    <button type="submit" class="btn btn-default">Submit<span class="glyphicon glyphicon-ok"></button>
+  </form>
+  <hr />
+</div>
+<div class="row">
+  <b>Roster of</b> {{team.name}}
+</div>
+<div class="row">
+   <b>Manager:</b> {{selectedTeam.manager}}
+</div>
+<div class="row">
+  <b>Members:</b>
+  <ol>
+    <li ng-repeat="member in selectedTeam.members track by $index">{{member}}</li>
+  </ol>
+</div>
