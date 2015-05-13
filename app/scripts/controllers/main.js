@@ -31,7 +31,7 @@ angular.module('mydemoApp')
 	}
 
 	$scope.isProductionTeam = function _isProductionTeam() {
-		return $scope.team === 'Production';
+		return $scope.team.key === 'Production';
 	}
 
 	$scope.loadTeamData = function _loadTeamData() {
