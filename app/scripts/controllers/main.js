@@ -23,7 +23,7 @@ angular.module('mydemoApp')
 	};
 
 	$scope.loadTeamData = function _loadTeamData() {
-		/*$scope.message = '';
+		$scope.message = '';
 		$scope.errMessage = '';
 		if ($scope.team == null) {
 			$scope.selectedTeam.manager = '';
@@ -38,7 +38,7 @@ angular.module('mydemoApp')
 				$scope.errMessage = 'Unable to load data of ' + $scope.team.name;
 				$scope.selectedTeam.manager = '';
 				$scope.selectedTeam.members = '';
-		});*/
+		});
 	}
 
     /*$scope.message = '';

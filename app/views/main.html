@@ -13,13 +13,13 @@
   team.key = {{team.key}}<br />
   team.name = {{team.name}}<br />
 </div>
-<!--
 <div class="row alert alert-success" ng-show="message">
   {{message}}
 </div>
 <div class="row alert alert-warning" ng-show="errMessage">
   {{errMessage}}
 </div>
+<!--
 <div class="row" ng-show="isProductionTeam()">
   <form class="form-inline" ng-submit="addNewJoin()">
     <div class="form-group">
@@ -30,6 +30,7 @@
   </form>
   <hr />
 </div>
+-->
 <div class="row">
   <b>Roster of</b> {{team.name}} 
   (<ng-pluralize count="selectedTeam.members.length + (selectedTeam.manager  ? 1 : 0)"
@@ -37,7 +38,6 @@
            '1' : 'Single Member',
            'other' : '{} Members'}">
   </ng-pluralize>)
-
 </div>
 <div class="row">
    <b>Manager:</b> {{selectedTeam.manager}}
@@ -48,4 +48,3 @@
     <li ng-repeat="member in selectedTeam.members track by $index">{{member}}</li>
   </ol>
 </div>
--->
