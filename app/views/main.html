@@ -1,8 +1,5 @@
 <div class="jumbotron">
   <h3>{{company}}</h3>
-  <p class="lead">
-    Always a pleasure scaffolding your apps.
-  </p>
   <div class="form-horizontal">
     <div class="form-group">
       <label for="teamDropdown" class="col-sm-3 control-label">Team Name:</label>
@@ -13,6 +10,8 @@
       </div>
     </div>
   </div>
+  team.key = {{team.key}}<br />
+  team.name = {{team.name}}<br />
 </div>
 <div class="row alert alert-success" ng-show="message">
   {{message}}
@@ -31,7 +30,13 @@
   <hr />
 </div>
 <div class="row">
-  <b>Roster of</b> {{team.name}} ({{selectedTeam.members.length + (selectedTeam.manager  ? 1 : 0) }})
+  <b>Roster of</b> {{team.name}} 
+  (<ng-pluralize count="selectedTeam.members.length + (selectedTeam.manager  ? 1 : 0)"
+    when="{'0' : 'No Member', 
+           '1' : 'Single Member',
+           'other' : '{} Members'}">
+  </ng-pluralize>)
+
 </div>
 <div class="row">
    <b>Manager:</b> {{selectedTeam.manager}}

@@ -81,3 +81,10 @@ body {
     border-bottom: 0;
   }
 }
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.jumbotron {
+  padding: 10px 10px;
+  margin-bottom: 10px;
+}
