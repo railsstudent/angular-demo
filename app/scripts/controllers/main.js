@@ -14,25 +14,13 @@ angular.module('mydemoApp')
     	{key: 'QA', name: 'QA'}, {key: 'Architecture', name: 'Architecture & DBA'}, 
     		{key: 'M3', name: 'M3/Procurement/HR/EDI'}];
 
-    $scope.team = '';
-    $scope.message = '';
     $scope.company = 'TAL';
-    $scope.newjoin = '';
-    $scope.errMessage = '';
+    $scope.team = undefined;
 
 	$scope.selectedTeam = {
 		manager : '',
 		members : []		
 	};
-	$scope.addNewJoin = function _addNewJoin() {
-		$scope.selectedTeam.members.push($scope.newjoin);
-		$scope.message = $scope.newjoin + " joins production team.";
-		$scope.newjoin = '';
-	}
-
-	$scope.isProductionTeam = function _isProductionTeam() {
-		return $scope.team.key === 'Production';
-	}
 
 	$scope.loadTeamData = function _loadTeamData() {
 		$scope.message = '';
@@ -53,4 +41,17 @@ angular.module('mydemoApp')
 		});
 	}
 
+    $scope.message = '';
+    $scope.errMessage = '';
+
+	$scope.newjoin = '';
+	$scope.addNewJoin = function _addNewJoin() {
+		$scope.selectedTeam.members.push($scope.newjoin);
+		$scope.message = $scope.newjoin + " joins production team.";
+		$scope.newjoin = '';
+	}
+
+	$scope.isProductionTeam = function _isProductionTeam() {
+		return $scope.team.key === 'Production';
+	}
   });
