@@ -19,7 +19,6 @@
 <div class="row alert alert-warning" ng-show="errMessage">
   {{errMessage}}
 </div>
-<!--
 <div class="row" ng-show="isProductionTeam()">
   <form class="form-inline" ng-submit="addNewJoin()">
     <div class="form-group">
@@ -30,7 +29,6 @@
   </form>
   <hr />
 </div>
--->
 <div class="row">
   <b>Roster of</b> {{team.name}} 
   (<ng-pluralize count="selectedTeam.members.length + (selectedTeam.manager  ? 1 : 0)"

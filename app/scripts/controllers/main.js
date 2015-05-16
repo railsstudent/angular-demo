@@ -41,7 +41,7 @@ angular.module('mydemoApp')
 		});
 	}
 
-    /*$scope.message = '';
+    $scope.message = '';
     $scope.errMessage = '';
 
 	$scope.newjoin = '';
@@ -53,5 +53,5 @@ angular.module('mydemoApp')
 
 	$scope.isProductionTeam = function _isProductionTeam() {
 		return $scope.team.key === 'Production';
-	}*/
+	}
   });
