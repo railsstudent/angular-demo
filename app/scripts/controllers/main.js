@@ -52,6 +52,9 @@ angular.module('mydemoApp')
 	}
 
 	$scope.isProductionTeam = function _isProductionTeam() {
-		return $scope.team.key === 'Production';
+		if ($scope.team != undefined && $scope.team != null) {
+			return $scope.team.key === 'Production';
+		}
+		return false;
 	}
   });
