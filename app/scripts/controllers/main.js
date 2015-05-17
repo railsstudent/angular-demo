@@ -27,7 +27,7 @@ angular.module('mydemoApp')
 		$scope.errMessage = '';
 		if ($scope.team == null) {
 			$scope.selectedTeam.manager = '';
-			$scope.selectedTeam.members = '';
+			$scope.selectedTeam.members =  [];
 			return;
 		}
 		MainFactory.loadTeamData().get({team : $scope.team.key }, 
@@ -37,7 +37,7 @@ angular.module('mydemoApp')
 			}, function(response) {
 				$scope.errMessage = 'Unable to load data of ' + $scope.team.name;
 				$scope.selectedTeam.manager = '';
-				$scope.selectedTeam.members = '';
+				$scope.selectedTeam.members = [];
 		});
 	}
 
