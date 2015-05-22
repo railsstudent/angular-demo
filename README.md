@@ -8,6 +8,8 @@ Type bower install to install bower packages
 
 Type sudo npm install to install npm packages
 
+Download zip file of the project and extract the project from it.
+
 Type grunt serve to launch application in browser 
 
 
